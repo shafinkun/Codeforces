@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 #include<iomanip>
     using namespace std;
 
@@ -7,7 +7,8 @@
         int R;
         double res;
         cin>>R;
-        res=(4.0/3*3.14159*R*R*R);
+        double x = pow(R,3);
+        res=((4.0/3)*3.14159*x);
         cout<<fixed;
         cout<<setprecision(3)<<"VOLUME = "<<res<<endl;    
         return 0;

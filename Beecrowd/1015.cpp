@@ -8,7 +8,7 @@ int main()
     cin>>x2>>y2;
     double a=x2-x1;
     double b=y2-y1;
-    diff=pow((pow(a,2)+pow(b,2)),0.5);
+    diff=sqrt(pow(a,2)+pow(b,2));
     cout<<fixed<<setprecision(4);
     cout<<diff<<endl;
     return 0;

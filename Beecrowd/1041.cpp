@@ -7,9 +7,9 @@ int main()
     cin>>x>>y;
     if(x+y==0){cout<<"Origem"<<endl;
                 return 0;}
-    if(x==0){cout<<"Eixo X"<<endl;
+    if(x==0){cout<<"Eixo Y"<<endl;
                 return 0;} 
-    if(y==0){cout<<"Eixo Y"<<endl;
+    if(y==0){cout<<"Eixo X"<<endl;
                 return 0;}            
     if(x>0&&y>0){cout<<"Q1"<<endl;
                 return 0;} 

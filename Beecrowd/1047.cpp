@@ -9,7 +9,7 @@ int main()
     if(m2>m1) {min=(m2-m1);
                 if(h2>h1) {hour=(h2-h1);
                 cout<<"O JOGO DUROU "<<hour<<" HORA(S) E "<<min<<" MINUTO(S)"<<endl; return 0;}
-                else if(h1==h2){hour==0;
+                else if(h1==h2){hour=0;
                 cout<<"O JOGO DUROU "<<hour<<" HORA(S) E "<<min<<" MINUTO(S)"<<endl; return 0;}
                 else if(h1>h2) {
                     hour=((24+h2)-h1);

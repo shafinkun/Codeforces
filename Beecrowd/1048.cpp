@@ -1,29 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
+ 
 int main()
 {
-    float n,m,t;
-    cin>>fixed>>setprecision(2);
-    cin>>n;
-    if(n>=0 && n<=400.00) {m=n*.15;
-        t=n+m;
-        cout<<fixed<<setprecision(2);
-        cout<<"Novo salario: "<<t<<" \nReajuste ganho: "<<m<<" \nEm percenrual: 15 %"<<endl;}
-    else if(n>=400.01 && n<=800.00) {m=n*.12;
-        t=n+m;
-        cout<<fixed<<setprecision(2);
-        cout<<"Novo salario: "<<t<<" \nReajuste ganho: "<<m<<" \nEm percenrual: 12 %"<<endl;}
-    else if(n>=800.01 && n<=1200.00) {m=n*.1;
-        t=n+m;
-        cout<<fixed<<setprecision(2);
-        cout<<"Novo salario: "<<t<<" \nReajuste ganho: "<<m<<" \nEm percenrual: 10 %"<<endl;} 
-    else if(n>=1200.01 && n<=2000.00) {m=n*.07;
-        t=n+m;
-        cout<<fixed<<setprecision(2);
-        cout<<"Novo salario: "<<t<<" \nReajuste ganho: "<<m<<" \nEm percenrual: 7 %"<<endl;} 
-    else if(n>2000.00) {m=(n*.04);
-        t=n+m;
-        cout<<fixed<<setprecision(2);
-        cout<<"Novo salario: "<<t<<" \nReajuste ganho: "<<m<<" \nEm percenrual: 4 %"<<endl;}   
-    return 0;          
+    double salin,salout,money,percent,val,multi;
+    cin>>salin;
+    if(salin>=0 && salin<=400.00)
+    {
+        val=0.15;
+    }
+    else if(salin>=400.01 && salin<=800.00)
+    {
+        val=0.12;
+    }
+    else if(salin>=800.01 && salin<=1200.00)
+    {
+        val=0.1;
+    }
+    else if(salin>=1200.01 && salin<=2000.00)
+    {
+        val=0.07;
+    }
+    else
+    {
+        val=0.04;
+    }
+    money=salin*val;
+    salout=salin+money;
+    percent=val*100;
+    cout << "Novo salario: " << fixed << setprecision(2) << salout<< endl;
+    cout << "Reajuste ganho: " << fixed << setprecision(2) << money << endl;
+    cout << "Em percentual: " << fixed << setprecision(0) << percent << " %" << endl;
+ 
+    return 0;
 }

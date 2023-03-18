@@ -17,7 +17,7 @@ int main()
         {
             if(b=="inseto"){
                 if(c=="hematofago"){cout<<"pulga"<<endl;}
-                else if(c=="herbivoro"){cout<<"lagar"<<endl;}}
+                else if(c=="herbivoro"){cout<<"lagarta"<<endl;}}
             else if(b=="anelideo"){
                 if(c=="hematofago"){cout<<"sanguessuga"<<endl;}
                 else if(c=="onivoro"){cout<<"minhoca"<<endl;}}

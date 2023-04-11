@@ -12,8 +12,13 @@ int main()
     int aaa = aa + 9;
     float bbb = bb + 9;
     double ccc = cc + 9;
+    cout<<"Using setw(15)\n";
     cout<<a<<setw(15)<<b<<setw(15)<<c<<"\n";
     cout<<aa<<setw(15)<<bb<<setw(15)<<cc<<"\n";
-    cout<<aaa<<setw(15)<<bbb<<setw(15)<<ccc;
+    cout<<aaa<<setw(15)<<bbb<<setw(15)<<ccc<<"\n\n";
+    cout<<"Using tab\n";
+    cout<<a<<"\t"<<b<<"\t\t"<<c<<"\n";
+    cout<<aa<<"\t"<<bb<<"\t\t"<<cc<<"\n";
+    cout<<aaa<<"\t"<<bbb<<"\t\t"<<ccc<<"\n";
     return 0;
 }

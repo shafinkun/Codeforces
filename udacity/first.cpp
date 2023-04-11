@@ -1,6 +1,7 @@
 #include "iostream"
+using namespace std;
 int main()
 {
-    std::cout<<"Hello world, I'm ready for C++";
+    cout<<"Hello world, I'm ready for C++";
     return 0;
 }

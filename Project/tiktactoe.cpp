@@ -1,7 +1,5 @@
 #include<iostream>
 using namespace std;
-
-
 char board[3][3] = { {'1','2','3'},{'4','5','6'},{'7','8','9'} };
 char turn = 'X';
 int row, column;
@@ -90,8 +88,7 @@ int main() {
     while (gameover()) {
         display_board();
         player_turn();
-        gameover();
-        
+        gameover();   
     }
     if (turn == 'X' && draw == false) {
         cout << "player 2[O] WINS!!!" << endl;
@@ -102,6 +99,4 @@ int main() {
     else {
         cout << "GAME DRAW!!" << endl;
     }
-
-
 }

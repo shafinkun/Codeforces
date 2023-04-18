@@ -9,7 +9,7 @@ int main()
     out<<st;
     string st2;
     ifstream in("sample2.txt");
-    in>>st2;
+    getline(in,st2);
     cout<<st2<<endl;
     getline(in,st2);
     cout<<st2;

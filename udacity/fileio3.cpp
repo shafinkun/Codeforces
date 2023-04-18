@@ -1,4 +1,4 @@
-//here we'll transfer a writing in a string to a file
+//here we'll transfer a writing of a string to a file
 #include<bits/stdc++.h>
 #include<fstream>
 using namespace std;

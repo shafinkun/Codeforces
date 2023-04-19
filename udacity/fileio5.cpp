@@ -1,3 +1,4 @@
+//reading from a file
 #include<bits/stdc++.h>
 #include<fstream>
 using namespace std;

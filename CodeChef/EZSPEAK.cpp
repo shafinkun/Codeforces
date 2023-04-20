@@ -1,29 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
+bool check(char a){
+    if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u')
+    return 0;
+    else 
+    return 1;
+}
 int main()
 {
-    int t, m, count = 0;
-    char s[100];
-    cin >> t;
-    while (t--)
+    int j,t;
+    char word[j];
+    cin>>t;
+    while(t)
     {
-        cin >> m;
-        for (int i = 0; i < m; i++)
+    cin>>j;
+    cin>>word;
+    if(j<4){cout<<"YES\n";}
+    else if(j>3)
+    {for(int i=0;i<j;i++)
         {
-            cin >> s[i];
+        if(check(word[i])&&check(word[i+1])&&check(word[i+2])&&check(word[i+3]))
+        {cout<<"NO\n";}
         }
-        for (int i = 0; i < m; i++)
-        {
-            if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
-            {count = 0;}
-
-             if(s[i] != 'a' && s[i] != 'e' && s[i] != 'i' && s[i] != 'o' && s[i] != 'u')
-                {
-                   count++;
-                   if(count==4){cout<<"NO"<<endl;}
-                }
-        }
-            if(count<4){cout<<"YES"<<endl;}
-        }
+    cout<<"YES\n";
+    t--;}
+    }
     return 0;
 }

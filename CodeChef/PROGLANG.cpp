@@ -8,13 +8,11 @@ int main()
     {
         cin>>a>>b>>c>>d>>e>>f;
 
-        if((a==c||a==d)){
-            if((b==c||b==d)){
-            cout<<1<<endl;}
+        if((a==c||a==d)&&(b==c||b==d)){
+            cout<<1<<endl;
         } 
-        else  if((a==e||a==f)){
-            if((b==e||b==f)){
-            cout<<2<<endl;}
+        else  if((a==e||a==f)&&(b==e||b==f)){
+            cout<<2<<endl;
         } 
         else {cout<<0<<endl;}
     }

@@ -1,3 +1,4 @@
+//that's an achievement 
 #include <bits/stdc++.h>
 using namespace std;
 bool check(char wo)
@@ -7,11 +8,12 @@ bool check(char wo)
 }
 int main()
 {
-    int j,t,count=0;
+    int j,t;
     string word;
     cin>>t;
     while(t--)
     {
+    int count=0;
     cin>>j;
     cin>>word;
     if(j<4){cout<<"YES\n";}
@@ -22,15 +24,13 @@ int main()
         if(check(word[i]))
         {
             count++;
-            if(count<4){cout<<"YES\n";
-                count=0;
-                break;}
+            if(count>=4){cout<<"NO\n";
+            break;}
         }
         else{count=0;}
         }
-    if(count>=4){cout<<"NO\n";
-    count=0;}
+    if(count<4){cout<<"YES\n";}
     }
     }
+    return 0;
 }
-

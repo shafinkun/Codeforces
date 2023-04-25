@@ -2,20 +2,18 @@
 using namespace std;
 int main()
 {
-    int t,n,num[n];
+    int t,n,num,r;
     cin>>t;
     while(t--)
     {   
+        r=0;
         cin>>n;
-        for(int i=0;i<n;i++)
+        while(n--)
         {
-            cin>>num[i];
-        }  
-            for(int i=0;i<n;i++)
-            {
-                for(int j=0;j<n;j++)
-                {if(i!=j && num[i]!=num[j]) cout<<num[i]<<endl;}
-            }
+            cin>>num;
+            r=r^num;
+        }
+        cout<<r<<endl;
     }
     return 0;
 }

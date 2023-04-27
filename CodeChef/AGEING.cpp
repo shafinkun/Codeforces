@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
-using namespace std;
 int main()
 {
     int t,x,y;
-    cin>>t;
+    std::cin>>t;
     while(t--)
     {
-        cin>>x;
-        if(y>x) cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
+        std::cin>>x;
+        std::cin>>y;
+        if(y>x) std::cout<<"YES"<<std::endl;
+        else std::cout<<"NO"<<std::endl;
     }
     return 0;
 }

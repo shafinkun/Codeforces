@@ -4,17 +4,20 @@ int main()
 {
     int t,n,a;
     string s;
+    char sr[500];
+    cin>>t;
     while(t--)
     {
+        int a=0;
         cin>>n;
         cin>>s;
         for(int i=0;i<n;i++)
         {
             if(s[i]=='.') continue;
-            else if(s[i]==s[i]=='H') a=0;
-            else if(s[i]=='T') a=1;
-        };
-        if(a)
+            sr[a]=s[i];
+            a++;
+        } 
+        cout<<sr;
     }
     return 0;
 }

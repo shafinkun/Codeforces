@@ -3,9 +3,9 @@ using namespace std;
 int main()
 {
     int t,a,i,b[i];
-    cin>>t;
+    std::cin>>t;
     while(t--){
-        cin>>a;
+        std::cin>>a;
         
         if(a%2!=0)
     }

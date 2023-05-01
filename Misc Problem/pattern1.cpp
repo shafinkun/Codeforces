@@ -1,20 +1,17 @@
 //triangle shape
-#include<iostream>
-#include<conio.h>
-using namespace std;
+#include<bits/stdc++.h>
 int main()
 {
     int n;
-    cout<<"Input n:";
-    cin>>n;
+    std::cout<<"Input n:";
+    std::cin>>n;
 
     for(int i=1;i<=n;i++){
         for(int j=1;j<=i;j++){
-            cout<<"*";
+            std::cout<<"*";
         }
-        cout<<endl;
+        std::cout<<std::endl;
     }
-    cout<<"\nthis is your pattern!"<<endl;
+    std::cout<<"\nthis is your pattern!"<<std::endl;
     return 0;
-    getch;
 }

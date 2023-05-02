@@ -1,26 +1,22 @@
 //Pascal's Triangle
-#include<iostream>
-#include<conio.h>
-using namespace std;
+#include<bits/stdc++.h>
 int main()
 {
     int n;
-    cin>>n;
+    std::cin>>n;
     for(int i=1;i<=n;i++)
     {
         int damn=1;
         for(int j=n;j>i;j--)
         {
-            cout<<" ";
+            std::cout<<" ";
         }
         for(int k=1;k<=i;k++)
         {
-            cout<<damn<<" ";
+            std::cout<<damn<<" ";
             damn=damn*(i-k)/k;
-
         }
-        cout<<endl;
+        std::cout<<std::endl;
     }
     return 0;
-    getch;
 }

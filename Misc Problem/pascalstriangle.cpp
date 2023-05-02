@@ -15,6 +15,7 @@ int main()
         {
             std::cout<<damn<<" ";
             damn=damn*(i-k)/k;
+
         }
         std::cout<<std::endl;
     }

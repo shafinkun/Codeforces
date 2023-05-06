@@ -18,7 +18,7 @@ int main()
             for(int j=m-1;j>=0;j--)
             if(arr[i]==arr[j])
             {   
-                check=0;
+                check=0 ;
                 break;
             }
         }

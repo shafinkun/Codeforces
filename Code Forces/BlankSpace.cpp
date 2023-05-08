@@ -21,6 +21,5 @@ int main()
             else {temp=0;}
         }
         cout<<count<<endl;
-
     }
 }

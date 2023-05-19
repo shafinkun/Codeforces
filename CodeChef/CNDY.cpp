@@ -8,34 +8,42 @@ int main()
     {
         int n;
         cin >> n;
-        int m = 2 * n;
-        int arr[n];
-        int arr2[n];
-        bool check = true;
-        for (int i = 0; i < n; i++)
+        int num[2 * n];
+        bool flag = true;
+        for (int i = 0; i < 2 * n; i++)
         {
-            cin >> arr[i];
+            cin >> num[i];
         }
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < 2 * n; i++)
         {
-            cin >> arr2[i];  
-        }
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; i < n; j++)
+            int count = 0;
+            bool terminate = false;
+            for (int j = 0; j < 2 * n; j++)
             {
-                if (arr2[i] == arr[j])
+                if (num[i] == num[j])
                 {
-                    check = false;
+                    count++;
+                    if (count > 2)
+                    {
+                        flag = false;
+                        terminate = true;
+                        break;
+                    }
+                }
+                if (terminate)
+                {
                     break;
                 }
-            }  
+            }
         }
-
-        if (check)
-            cout << "Yes\n";
+        if (flag)
+        {
+            cout << "YES \n";
+        }
         else
-            cout << "No\n";
+        {
+            cout << "NO \n";
+        }
     }
     return 0;
 }

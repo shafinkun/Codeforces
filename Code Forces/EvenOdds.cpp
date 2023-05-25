@@ -2,10 +2,9 @@
 using namespace std;
 int main()
 {
-    int n,l;
-    cin>>n>>l;
+    int n,k;
+    cin>>n>>k;
     char s[n];
     
-    cout<<s[l-1];
     return 0;
 }

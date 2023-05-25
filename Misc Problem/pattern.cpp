@@ -9,7 +9,7 @@ int main()
         for(int j=1;j<=col;j++){
             std::cout<<"*  ";
         }
-        std::cout<<endl;
+        std::cout<<std::endl;
     }
     return 0;
 }

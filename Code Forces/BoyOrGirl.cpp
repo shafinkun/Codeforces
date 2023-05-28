@@ -5,11 +5,12 @@ int main()
     string name;
     cin >> name;
     int count = 0;
+    bool check=false;
     for (int i = 0; i < name.size(); i++)
     {
         for (int j = i + 1; j < name.size(); j++)
         {
-            if (name[i] == name[j])
+            if (name[i] != name[j])
             {
                 count++;
             }

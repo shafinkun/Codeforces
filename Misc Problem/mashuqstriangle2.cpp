@@ -7,12 +7,12 @@ int main()
     for(int i=1;i<=n;i++)
     {
         for(int j=n;j>i;j--)
-        {std::cout<<" ";}
+        {std::cout<<"   ";}
             for(int k=2*i;k>1;k--)
             {
-                if(i==n)std::cout<<0;
-                else if(k==2*i||k==2)std::cout<<0;
-                else std::cout<<1;
+                if(i==n)std::cout<<0<<"  ";
+                else if(k==2*i||k==2)std::cout<<0<<"  ";
+                else std::cout<<1<<"  ";
             }
         std::cout<<std::endl;
     }

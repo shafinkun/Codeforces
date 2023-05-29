@@ -1,3 +1,4 @@
+//this is your first but not last beautiful cunning logical code!
 #include <bits/stdc++.h>
 using namespace std;
 int main()

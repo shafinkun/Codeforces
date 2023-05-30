@@ -1,6 +1,5 @@
 //even odd numbers
-#include<iostream>
-#include<conio.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -13,5 +12,4 @@ int main()
     }
     else{cout<<a<<" is odd";}
     return 0;
-    getch;
 }

@@ -18,7 +18,7 @@ int main()
                 {
                     a = 9;
                 }
-                else if (num[i] == '0')
+                else if (num[i] == 0)
                 {
                     a = 0;
                     break;

@@ -1,5 +1,5 @@
 //Let's do this
-#include<iostream>
+#include<bits/stdc++.h>
 #include<cmath>
 using namespace std;
 bool check(int r)

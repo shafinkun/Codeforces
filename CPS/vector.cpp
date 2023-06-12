@@ -1,16 +1,13 @@
-//First time using vector
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    vector <int> v;
-    v.push_back (2);
-    v.push_back (3);
-    v.push_back (3);
-    v.push_back (4);
-    for(int i=0;i<v.size();i++)
-    {
-        cout<<v[i];
-    }
+    vector<int> v = {5, 5, 2, 8, 6, 9, 8, 7, 2, 4, 3, 5, 2, 2, 3, -1};
+    sort(v.begin(), v.end());
+    int size = unique(v.begin(), v.end()) - v.begin();
+
+    for (auto i = 0; i < size; i++)
+        cout << v[i] << " ";
+    cout << endl;
     return 0;
 }

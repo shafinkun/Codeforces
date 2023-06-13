@@ -1,4 +1,2 @@
-        for(int j=n;j>i;j--)
-        {
-            std::cout<<" ";
-        }
+char a=toupper(s[i]);
+        

@@ -5,21 +5,11 @@ int main()
 {
     long long n;
     cin >> n;
-    int count=0;
-    while (n)
-    {
-        if (n % 10 == 4 || n % 10 == 7)
-        {
-            count++;
-        }
-        n/=10;
-    }
-    if (count == 7 || count == 4)
-    {
-        cout << "YES" << endl;
-    }
-    else
-        cout << "NO" << endl;
+    string s = to_string(n);
+    int four = count(s.begin(),s.end(),'4');
+    int seven = count(s.begin(),s.end(),'7');
+    if(seven + four == 4 || seven + four == 7) cout<<"YES";
+    else cout<<"NO";
 
     return 0;
 }

@@ -1,4 +1,8 @@
-#include<iostream>
+#include<bits/stdc++.h>
+#define endl '\n';
+#define optimize()    ios_base::sync_with_stdio(false);/
+    cin.tie(NULL);/
+    cout.tie(NULL);
 using namespace std;
 int factorial(int i);
 int main()
@@ -23,6 +27,7 @@ int main()
     return 0;
 
 }
+
 int factorial(int i)
 {
     if(i<=1) return 1;

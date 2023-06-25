@@ -1,8 +1,13 @@
 //The butterfly pattern
-#include<iostream>
-using namespace std;
+#include<bits/stdc++.h>
+#define endl '\n';
+#define optimize()  ios_base::sync_with_stdio(false);\
+    cin.tie(NULL);\
+    cout.tie(NULL);using namespace std;
 int main()
 {
+    optimize();
+
     int n;
     cout<<"Input the value of n:";
     cin>>n;

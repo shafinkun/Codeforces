@@ -1,5 +1,5 @@
-#include<iostream>
-#include<conio.h>
+#include<bits/stdc++.h>
+
 using namespace std;
 int main()
 //input name//
@@ -11,5 +11,4 @@ and welcoming him/her to the world of programming*/
     cin>>ch;
     cout<<"\tHello "<<ch<<"! Welcome to the programming world!";
     return 0;
-    getch;
 }

@@ -19,6 +19,10 @@ int main()
         if(a==b==c==1){
             cout << 3 << endl;
         }
+        else if(a==c==1 && b!=1)
+        {
+            cout << a+b+c <<endl;
+        }
 
         else if(((a+b)*c) >= (a*(b+c)))
         {

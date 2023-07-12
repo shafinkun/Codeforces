@@ -5,7 +5,7 @@
     cin.tie(0);                   \
     cout.tie(0);
 using namespace std;
-bool check(int a);
+bool check(long long a);
 
 int main()
 {
@@ -16,27 +16,43 @@ int main()
 
     while (n--)
     {
-        long long int num;
+        long long num;
         cin >> num;
 
-        long double root = sqrt(num);
-        if(check(root)){
-            cout << "YES" << endl;
+        if (num == 1)
+        {
+            cout << "NO" << endl;
+            continue;
         }
-        else{
+
+        long long root = sqrt(num);
+        if (root * root != num)
+        {
             cout << "NO" << endl;
         }
-        
+
+        else
+        {
+            if (check(root))
+            {
+                cout << "YES" << endl;
+            }
+            else {
+                cout << "NO" << endl;
+            }
+        }
     }
 
     return 0;
 }
-bool check(long double a){
+bool check(long long a)
+{
 
     int max = sqrt(a);
-    for(int i = 2; i <= max ; i++)
+    for (int i = 2; i <= max; i++)
     {
-        if((int)a % i == 0){
+        if (a % i == 0)
+        {
             return false;
         }
     }

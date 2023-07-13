@@ -9,6 +9,18 @@ int main()
 {
     optimize();
 
+    int count = 0;
+
+    vector<int> v;
+    for (int i = 1; count <= 1000; i++)
+    {
+        if (i % 3 != 0 && i % 10 != 3)
+        {
+            v.push_back(i);
+            count++;
+        }
+    }
+
     short t;
     cin >> t;
 
@@ -17,23 +29,7 @@ int main()
         int a;
         cin >> a;
 
-        int count = 0;
-        for (int i = 1; count <= a; i++)
-        {
-
-            if (count == a)
-            {
-                cout << i - 1 << endl;
-                break;
-            }
-            if (i % 3 == 0 || i % 10 == 3)
-            {
-            }
-            else
-            {
-                count++;
-            }
-        }
+        cout << v[a - 1] << endl;
     }
 
     return 0;

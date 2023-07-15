@@ -1,5 +1,5 @@
-#include<iostream>
-#include<conio.h>
+#include<bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -16,5 +16,5 @@ int main()
     long e;
     cout << "size of long int " << sizeof(e) << endl;
 
-    getch;
+    return 0;
 }

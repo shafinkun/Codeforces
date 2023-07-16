@@ -1,13 +1,14 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <bits/stdc++.h>
+
 int main()
 {
-    string s;
-    cin>>s;
-    for(int i=0;i<s.size();i++)
+    std::string s;
+    std::cin >> s;
+    for (int i = 0; i < s.size(); i++)
     {
-        cout<<(char) toupper(s[i]);
+        std::cout << (char)toupper(s[i]);
     }
-    cout<<endl;
-    
+    std::cout << std::endl;
+
+    return 0;
 }

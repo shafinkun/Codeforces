@@ -13,33 +13,39 @@ int main()
     cin >> t;
     while (t--)
     {
+
+        int odd = 0, even = 0;
         bool check = true;
-        int count = 0;
-        int n;
+        int n ;
         cin >> n;
-        for(int i=1; i<=n; i++){
+        
+        for (int i = 1; i <= n; i++)
+        {
             int a;
             cin >> a;
-
-            if(check){
-                if(a % 2 != 0){
-                    count++;
+            if (check)
+            {
+                if (a % 2 != 0)
+                {
+                    odd++;
                 }
                 check = false;
             }
-            else{
-                if(a % 2 == 0){
-                    count++;
+            else
+            {
+                if (a % 2 == 0)
+                {
+                    even++;
                 }
                 check = true;
             }
         }
-
-        if(count % 2 == 0){
-            count /= 2;
-            cout << count << endl;
+        if (even == odd)
+        {
+            cout << even << endl;
         }
-        else {
+        else
+        {
             cout << -1 << endl;
         }
     }

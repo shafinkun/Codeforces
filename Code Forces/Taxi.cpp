@@ -9,46 +9,40 @@ int main()
 {
     optimize();
 
-    short t;
-    cin >> t;
-    while (t--)
-    {
+    int n;
+    cin >> n; 
 
-        int odd = 0, even = 0;
-        bool check = true;
-        int n ;
-        cin >> n;
-        
-        for (int i = 1; i <= n; i++)
-        {
-            int a;
-            cin >> a;
-            if (check)
-            {
-                if (a % 2 != 0)
-                {
-                    odd++;
-                }
-                check = false;
-            }
-            else
-            {
-                if (a % 2 == 0)
-                {
-                    even++;
-                }
-                check = true;
-            }
-        }
-        if (even == odd)
-        {
-            cout << even << endl;
-        }
-        else
-        {
-            cout << -1 << endl;
-        }
+    vector<int> v;
+    for(int i = 0; i  < n; i++){
+        int a;
+        cin >> a;
+        v.push_back(a);
     }
+
+    int one = count(v.begin(),v.end(),1);
+    int two = count(v.begin(),v.end(),2);
+    int three = count(v.begin(),v.end(),3);
+    int four = count(v.begin(),v.end(),4);
+    
+    int car = four + three;
+
+    if(three >= one){
+        one = 0;
+    }
+    else{
+        one -= three;
+    }
+
+    two *= 2;
+    int num = 0;
+    if((two + one) % 4 == 0){
+        num = (two + one) / 4;
+    }
+    else{
+        num = ((two + one) / 4) + 1;
+    }
+
+    cout << car + num << endl;
 
     return 0;
 }

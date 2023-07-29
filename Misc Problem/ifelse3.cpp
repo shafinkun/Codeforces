@@ -1,14 +1,21 @@
 //even odd numbers
 #include<bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
 int main()
 {
     int a;
-    std::cout<<"Input an positive integer:";
-    std::cin>>a;
-    if(a%2==0)
+    cout<<"Input an positive integer:";
+    cin>>a;
+    if(a % 2 == 0)
     {
-        std::cout<<a<<" is even";
+        cout << a <<" is even"<< endl;
     }
-    else{std::cout<<a<<" is odd";}
+    else
+    {
+        cout << a <<" is odd"<< endl;
+    }
+
     return 0;
 }

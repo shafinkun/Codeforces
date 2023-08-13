@@ -9,6 +9,8 @@ typedef unsigned long long ull;
 using namespace std;
 int main()
 {
+    optimize();
+    
     int a , b;
     cin >> a >> b;
 

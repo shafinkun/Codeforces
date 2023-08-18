@@ -26,8 +26,7 @@ int main()
     }
     else
     {
-        unordered_map<string, int>::iterator it = mp.begin();
-        if(it->second > ++it->second)
+        if(mp.begin()->second > (++mp.begin())->second)
         {
             cout << mp.begin()->first << endl;
         }

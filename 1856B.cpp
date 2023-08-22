@@ -14,25 +14,30 @@ int main()
     short t;
     cin >> t;
 
-    while(t--)
+    while (t--)
     {
-        short n;
+        int n;
         cin >> n;
-        deque<int> l(n);
-
-        for(auto &a : l)
+        set<int> s;
+        for (int i = 1; i <= n; i++)
         {
+            int a;
             cin >> a;
+            s.insert(a);
         }
-
-        int zero = count(l.begin() , l.end() , 0) * 2;
-        int one = count(l.begin() , l.end() , 1);
-
-        if(zero == 0) zero = 1;
-
-        ll result = zero * one;
-
-        cout << result << endl;
+        if (n == 1)
+        {
+            cout << "NO" << endl;
+            continue;
+        }
+        if (s.size() == n)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
 
     return 0;

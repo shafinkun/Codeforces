@@ -163,21 +163,18 @@ int ask(int id, int b, int e, int i, int j, int val)
 }
 void solve()
 {
-    int x , y;
+    int x, y;
     cin >> x >> y;
     int n;
     cin >> n;
-    double mini = 0;
+    double mini = INFINITY;
     for (int i = 0; i < n; i++)
     {
         int a, b, v;
         cin >> a >> b >> v;
         double dis = sqrt((x - a) * (x - a) + (y - b) * (y - b));
         double time = dis / v;
-        if (i == 0)
-            mini = time;
-        else
-            mini = min(mini, time);
+        mini = min(mini, time);
     }
     cout << fixed << setprecision(20) << mini << endl;
 }

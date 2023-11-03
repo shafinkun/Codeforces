@@ -1,7 +1,5 @@
 A_Insert_Digits.cpp
 *.exe
-MusicalPuzzel.cpp
-RaisingBacteria.cpp
 1613B.cpp
 test.cpp
 1859A.cpp
@@ -11,4 +9,3 @@ test.cpp
 1810A.cpp
 237A.cpp
 327A.cpp
-1890B.cpp

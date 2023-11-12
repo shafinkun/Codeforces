@@ -166,23 +166,22 @@ void solve()
     ll n, k;
     cin >> n >> k;
 
-    while (n)
+here:
+    ll orig_n = n;
+    ll sum = 0;
+    while (orig_n)
     {
-        ll orig_n = n;
-        ll sum = 0;
-        while (orig_n)
-        {
-            sum += orig_n % 10;
-            orig_n /= 10;
-        }
-
-        if (sum % k == 0)
-        {
-            cout << n << endl;
-            return;
-        }
-        n++;
+        sum += orig_n % 10;
+        orig_n /= 10;
     }
+
+    if (sum % k == 0)
+    {
+        cout << n << endl;
+        return;
+    }
+    n++;
+    goto here;
 }
 
 int main()

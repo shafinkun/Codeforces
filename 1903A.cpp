@@ -165,18 +165,11 @@ void solve()
 {
     int n, k;
     cin >> n >> k;
-    vi v(n), temp(n);
+    vi v(n);
     for (auto &x : v)
         cin >> x;
-    temp = v;
 
-    sort(all(temp));
-    if (v == temp)
-    {
-        cout << "YES" << endl;
-        return;
-    }
-    if (k > 1)
+    if (is_sorted(all(v)) || k > 1)
     {
         cout << "YES" << endl;
         return;

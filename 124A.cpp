@@ -163,44 +163,15 @@ int ask(int id, int b, int e, int i, int j, int val)
 }
 void solve()
 {
-    int k;
-    cin >> k;
-    string s;
-    cin >> s;
+    int n, a, b;
+    cin >> n >> a >> b;
 
-    unordered_map<char, int> mp;
-    for (auto x : s)
-    {
-        mp[x]++;
-    }
-
-    string ans = "";
-    for (auto x : mp)
-    {
-        if (x.S % k)
-        {
-            cout << -1 << endl;
-            return;
-        }
-
-        for (int i = 0; i < x.S / k; i++)
-        {
-            ans += x.F;
-        }
-    }
-
-    for (int i = 0; i < k; i++)
-    {
-        cout << ans;
-    }
-    cout << endl;
-    return;
+    cout << n - max(a + 1, n - b) + 1 << endl;
 }
 int main()
 {
     optimize();
     int t = 1;
-    // cin >> t;
     while (t--)
     {
         solve();

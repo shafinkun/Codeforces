@@ -15,9 +15,9 @@ void solve()
     int a, b;
     cin >> a >> b;
 
-    int c = abs(a - b) / 2;
+    int odd = abs(a - b) / 2;
 
-    cout << min(a, b) << " " << c << endl;
+    cout << min(a, b) << " " << odd << endl;
     return;
 }
 int main()

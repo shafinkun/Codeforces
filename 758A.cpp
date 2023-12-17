@@ -1,6 +1,6 @@
 /*_______________In the name of Allah_____________*/
 /*________________Solved By shafinkun_____________*/
-// Problem link : https://codeforces.com/contest/1912/problem/L
+// Problem link : https://codeforces.com/problemset/problem/758/A
 
 #include <bits/stdc++.h>
 using namespace std;

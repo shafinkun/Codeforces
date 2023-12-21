@@ -12,7 +12,10 @@ using namespace std;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+
+    set<pair<int, int>> ;
 }
 
 int main()

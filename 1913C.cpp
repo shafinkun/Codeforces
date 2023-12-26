@@ -11,7 +11,9 @@ using namespace std;
 #define endl '\n'
 #define ll long long
 
-unordered_map<int, int> a;
+//vector can be used as map as well!!!!
+
+vector<int> a(30, 0);
 void solve()
 {
     int m;

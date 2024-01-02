@@ -14,33 +14,33 @@ void solve()
 {
     int n;
     cin >> n;
-    string s, s1;
+    string s, ans = "";
     cin >> s;
-    s1 = "";
-    
-    for(int i = n - 1; i >= 0; i--)
+
+    for (int i = n - 1; i >= 0; i--)
     {
-        if(s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] =='u')
+        if (s[i] == 'a' or s[i] == 'e')
         {
-            s1 += s[i];
+            ans += s[i];
             i--;
-            s1 += s[i];
-            if(i != 0)
-                s1 += '.';
+            ans += s[i];
+            if (i != 0)
+                ans += '.';
         }
         else
         {
-            s1 += s[i];
+            ans += s[i];
             i--;
-            s1 += s[i];
+            ans += s[i];
             i--;
-            s1 += s[i];
-            if(i != 0)
-                s1 += '.';
+            ans += s[i];
+            if (i != 0)
+                ans += '.';
         }
     }
-    reverse(s1.begin(), s1.end());
-    cout << s1 << endl;
+    reverse(ans.begin(), ans.end());
+
+    cout << ans << endl;
 
     return;
 }
@@ -54,5 +54,6 @@ int main()
     {
         solve();
     }
+    
     return 0;
 }

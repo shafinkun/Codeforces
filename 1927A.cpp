@@ -20,23 +20,8 @@ void solve()
     string s;
     cin >> s;
 
-    int first = 0, last = 0;
-    for(int i = 0; i < n; i++)
-    {
-        if(s[i] == 'B')
-        {
-            first = i;
-            break;
-        }
-    }
-    for(int i = n - 1; i >= 0; i--)
-    {
-        if(s[i] == 'B')
-        {
-            last = i;
-            break;
-        }
-    }
+    auto first = s.find('B');
+    auto last = s.rfind('B');
 
     int ans = (last - first) + 1;
     cout << ans << endl;

@@ -21,10 +21,6 @@ void solve(int a)
     ll most = (4 * n) - 2;
     if (k == most)
         cout << 2 * n << endl;
-    else if (k == (most - 1))
-        cout << 2 * n - 1 << endl;
-    else if (k == (most - 2))
-        cout << 2 * n - 2 << endl;
     else
         /*WTH!!! ceil() doesn't work properly!!!*/
         cout << (k & 1 ? (k + 1) / 2 : k / 2) << endl;

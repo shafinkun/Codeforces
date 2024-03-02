@@ -14,22 +14,42 @@ using namespace std;
 #define no puts("NO")
 
 vector<int> v = {1, 3, 6, 10, 15};
-void solve(int a)
+void solve()
 {
     ll n;
     cin >> n;
 
-    ll mini = -142;
+    vector<ll> dp(1e3+7, LLONG_MAX);
+    dp[0] = 0;
+
+    for(ll i = 1; i <= n; ++i)
+    {
+        for(auto x : v)
+        {
+            if(i >= x)
+            {
+                dp[i + x] = min(dp[i], dp[i - x] + 1);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    cerr << dp[n] << endl;
+    cout << dp[n] << endl;
+
+    return;    
 }
 
-int main()
+signed main()
 {
     optimize();
     int t = 1;
     cin >> t;
     while (t--)
     {
-        solve(t);
+        solve();
     }
     return 0;
 }

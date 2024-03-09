@@ -14,11 +14,11 @@ using namespace std;
 #define no puts("NO")
 
 void solve()
-{   
+{
     int a, b, k1, k2, q1, q2;
     cin >> a >> b >> k1 >> k2 >> q1 >> q2;
 
-    //For king:
+    // For king:
     set<pair<int, int>> s;
 
     int x1 = k1 + a;
@@ -33,32 +33,14 @@ void solve()
 
     s.insert({x1, y2});
     s.insert({x2, y1});
-    // if(x3 >= 0)
-    {
-        s.insert({x3, y2});
-    }
-    // if(x4 >= 0)
-    {
-        s.insert({x4, y1});
-    }
-    // if(y3 >= 0)
-    {
-        s.insert({x2, y3});
-    }
-    // if(y4 >= 0)
-    {
-        s.insert({x1, y4});
-    }
-    // if(x3 >= 0 && y4 >= 0)
-    {
-        s.insert({x3, y4});
-    }
-    // if(x4 >= 0 and y3 >= 0)
-    {
-        s.insert({x4, y3});
-    }
+    s.insert({x3, y2});
+    s.insert({x4, y1});
+    s.insert({x2, y3});
+    s.insert({x1, y4});
+    s.insert({x3, y4});
+    s.insert({x4, y3});
 
-    //For queen
+    // For queen
     set<pair<int, int>> s1;
     int w1 = q1 + a;
     int w2 = q1 + b;
@@ -72,50 +54,31 @@ void solve()
 
     s1.insert({w1, z2});
     s1.insert({w2, z1});
-    // if(w3 >= 0)
-    {
-        s1.insert({w3, z2});
-    }
-    // if(w4 >= 0)
-    {
-        s1.insert({w4, z1});
-    }
-    // if(z3 >= 0)
-    {
-        s1.insert({w2, z3});
-    }
-    // if(z4 >= 0)
-    {
-        s1.insert({w1, z4});
-    }
-    // if(w3 >= 0 && z4 >= 0)
-    {
-        s1.insert({w3, z4});
-    }
-    // if(w4 >= 0 and z3 >= 0)
-    {
-        s1.insert({w4, z3});
-    }
+    s1.insert({w3, z2});
+    s1.insert({w4, z1});
+    s1.insert({w2, z3});
+    s1.insert({w1, z4});
+    s1.insert({w3, z4});
+    s1.insert({w4, z3});
 
-    //Debugging 
+    // Debugging
     cerr << "For King: " << endl;
-    for(auto i : s)
+    for (auto i : s)
     {
         cerr << i.first << ' ' << i.second << endl;
     }
-    cerr << "For Queen: " << endl; 
-    for(auto i : s1)
+    cerr << "For Queen: " << endl;
+    for (auto i : s1)
     {
         cerr << i.first << ' ' << i.second << endl;
     }
-    
 
     int cnt = 0;
-    if(s.size() >= s1.size())
+    if (s.size() >= s1.size())
     {
-        for(auto i : s1)
+        for (auto i : s1)
         {
-            if(s.find(i) != s.end())
+            if (s.find(i) != s.end())
             {
                 cnt++;
             }
@@ -123,19 +86,17 @@ void solve()
     }
     else
     {
-        for(auto i : s)
+        for (auto i : s)
         {
-            if(s1.find(i) != s1.end())
+            if (s1.find(i) != s1.end())
             {
                 cnt++;
             }
         }
-    
     }
 
     cout << cnt << endl;
 
-    
     return;
 }
 

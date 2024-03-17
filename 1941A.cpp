@@ -1,6 +1,6 @@
 /*__________________In the name of Allah________________*/
 /*___________________Solved By shafinkun________________*/
-// Problem link : https://codeforces.com/contest/1374/problem/A
+// Problem link : https://codeforces.com/problemset/problem/1941/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,11 +15,27 @@ using namespace std;
 
 void solve()
 {
-    int x, y, n;
-    cin >> x >> y >> n;
-    int ans = n - (n % x) + y;
+    int n, m, k;
+    cin >> n >> m >> k;
 
-    cout << ans << endl;
+    vector<int> v1(n), v2(m);
+    for (auto &x : v1)
+        cin >> x;
+    for (auto &x : v2)
+        cin >> x;
+
+    int cnt = 0;
+
+    for (auto x : v1)
+    {
+        for (auto y : v2)
+        {
+            if (x + y <= k)
+                cnt++;
+        }
+    }
+
+    cout << cnt << endl;
 
     return;
 }

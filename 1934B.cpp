@@ -1,6 +1,6 @@
 /*__________________In the name of Allah________________*/
 /*___________________Solved By shafinkun________________*/
-// Problem link : https://codeforces.com/contest/1934/problem/A
+// Problem link : https://codeforces.com/problemset/problem/1934/B
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -14,37 +14,44 @@ using namespace std;
 #define no puts("NO")
 
 vector<int> v = {1, 3, 6, 10, 15};
+vector<int> dp(101, INFINITY);
+
 void solve()
 {
-    ll n;
+    int n;
     cin >> n;
 
-    vector<ll> dp(1e3+7, LLONG_MAX);
-    dp[0] = 0;
-
-    for(ll i = 1; i <= n; ++i)
+    if (n > 100)
     {
-        for(auto x : v)
-        {
-            if(i >= x)
-            {
-                dp[i + x] = min(dp[i], dp[i - x] + 1);
-            }
-            else
-            {
-                break;
-            }
-        }
+        int ans = n / 15;
+        int temp = n % 15;
+
+        cout << ans + dp[temp] << endl;
+
+        return;
     }
-    cerr << dp[n] << endl;
+
     cout << dp[n] << endl;
 
-    return;    
+    return;
 }
 
 signed main()
 {
     optimize();
+
+    dp[0] = 0;
+    for (int i = 1; i <= 100; ++i)
+    {
+        for (auto x : v)
+        {
+            if (i >= x)
+            {
+                dp[i] = min(dp[i], dp[i - x] + 1);
+            }
+        }
+    }
+
     int t = 1;
     cin >> t;
     while (t--)

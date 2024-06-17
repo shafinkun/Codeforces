@@ -29,9 +29,8 @@ void solve()
     for (int i = 1; i < n; ++i)
     {
         if (v[i] > temp)
-        {
             temp = v[i];
-        }
+
         largeEle[i] = temp;
     }
 

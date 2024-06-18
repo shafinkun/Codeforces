@@ -16,20 +16,23 @@ const int MOD = 1e9 + 7;
 
 void solve()
 {
-    string s, t;
-    cin >> s >> t;
+    string s;
+    getline(cin, s);
 
-    swap(s[0], t[0]);
+    swap(s[0], s[4]);
 
-    cout << s << ' ' << t << endl;
+    cout << s << endl;
     return;
 }
 
 int main()
 {
     optimize();
+
     int t = 1;
     cin >> t;
+    cin.ignore();
+
     while (t--)
     {
         solve();

@@ -19,51 +19,23 @@ void solve()
     ll x, y, z, k;
     cin >> x >> y >> z >> k;
 
-    ll X, Y, Z;
+    ll X, Y, Z, ans = 0;
     for (int i = 1; i <= x; ++i)
-    {   
-        bool flag = false;
+    {
         for (int j = 1; j <= y; ++j)
         {
             ll temp = i * j;
             if (k % temp == 0 and (k / temp) <= z)
             {
-                X = i;
-                Y = j;
-                Z = (k / temp);
-                flag = true;
-                break;
+                X = x - i + 1;
+                Y = y - j + 1;
+                Z = z - (k / temp) + 1;
+                ans = max(ans, X * Y * Z);
             }
         }
-        if(flag) break;
-    }
-    // cerr << X << " " << Y << " " << Z << endl;
-    // for x axis
-    ll cntX = 0;
-    for (int i = 0; i <= x; ++i)
-    {
-        if (i + X > x)
-            break;
-        cntX++;
-    }
-    // for y axis
-    ll cntY = 0;
-    for (int i = 0; i <= y; ++i)
-    {
-        if (i + Y > y)
-            break;
-        cntY++;
-    }
-    // for z axis
-    ll cntZ = 0;
-    for (int i = 0; i <= z; ++i)
-    {
-        if (i + Z > z)
-            break;
-        cntZ++;
     }
 
-    cout << cntX * cntY * cntZ << endl;
+    cout << ans << endl;
 
     return;
 }

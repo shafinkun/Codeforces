@@ -36,7 +36,6 @@ void solve()
     for (auto x : ans)
         cout << x << ' ';
     cout << endl;
-
     
     return;
 }

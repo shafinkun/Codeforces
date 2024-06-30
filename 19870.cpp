@@ -1,6 +1,6 @@
 /*___________________In the name of Allah________________*/
 /*____________________Solved By shafinkun________________*/
-// Problem link : https://codeforces.com/problemset/problem/1856/B
+// Problem link :
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,23 +16,16 @@ const int MOD = 1e9 + 7;
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
 
-    int sum = 0, nSum = 0;
-    for(int i = 0; i < n; i++)
+    int tm = 1, up = 1;
+    while (up != n)
     {
-        int temp;
-        cin >> temp;
-        sum += temp;
-
-        if(temp == 1) nSum += 2;
-        else nSum ++;
+        tm += k;
+        up++;
     }
-
-    if(nSum <= sum and n != 1) yes;
-    else no;
-
+    cout << tm << endl;
     return;
 }
 

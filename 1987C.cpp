@@ -1,6 +1,6 @@
 /*___________________In the name of Allah________________*/
 /*____________________Solved By shafinkun________________*/
-// Problem link : https://codeforces.com/problemset/problem/1856/B
+// Problem link :
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,20 +19,16 @@ void solve()
     int n;
     cin >> n;
 
-    int sum = 0, nSum = 0;
-    for(int i = 0; i < n; i++)
-    {
-        int temp;
-        cin >> temp;
-        sum += temp;
+    vector<int> v(n);
+    for(auto &x : v) cin >> x;
 
-        if(temp == 1) nSum += 2;
-        else nSum ++;
+    int maxTime = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        maxTime = max(maxTime, v[i] + i);
     }
 
-    if(nSum <= sum and n != 1) yes;
-    else no;
-
+    cout << maxTime << endl;
     return;
 }
 

@@ -17,43 +17,22 @@ void solve()
     int n, h, m;
     cin >> n >> h >> m;
 
-    set<pair<int, int>> s;
-    for (int i = 1; i <= n; ++i)
+    ll time = h * 60 + m;
+
+    ll ans = 1440;
+
+    while (n--)
     {
-        int x, y;
-        cin >> x >> y;
-        s.insert({x, y});
+        cin >> h >> m;
+        ll temp = h * 60 + m;
+
+        if (temp < time)
+            temp += 1440;
+
+        ans = min(ans, temp - time);
     }
 
-    int hour, minute;
-    if (s.begin()->first >= h)
-    {
-        if (s.begin()->second >= m)
-        {
-            minute = s.begin()->second - m;
-            hour = s.begin()->first - h;
-        }
-        else
-        {
-            minute = s.begin()->second + 60 - m;
-            hour = s.begin()->first - h - 1;
-        }
-    }
-    else
-    {
-        if (s.begin()->second >= m)
-        {
-            minute = s.begin()->second - m;
-            hour = 24 + s.begin()->first - h;
-        }
-        else
-        {
-            minute = s.begin()->second + 60 - m;
-            hour = 24 + s.begin()->first - h - 1;
-        }
-    }
-
-    cout << hour << ' ' << minute << endl;
+    cout << ans / 60 << ' ' << ans % 60 << endl;
 
     return;
 }

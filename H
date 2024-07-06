@@ -1,0 +1,11 @@
+
+  Id     Duration CommandLine
+  --     -------- -----------
+   1        1.005 try { . "c:\Users\HP\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\wo…
+   2        0.061 git config ls
+   3        0.063 git config
+   4        0.054 git config user.name shafinkun
+   5        0.066 git init
+   6        0.069 git add 1714.cpp
+   7        0.058 git add 1714A.cpp
+

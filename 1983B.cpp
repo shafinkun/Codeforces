@@ -19,59 +19,57 @@ void solve()
     int r, c;
     cin >> r >> c;
 
-    vector<string> a, b;
+    int a[r][c], b[r][c];
 
-    for (int i = 0; i < r; i++)
+    for(int i = 0; i < r; ++i)
     {
-        string temp;
-        cin >> temp;
-        a.push_back(temp);
-    }
-
-    for (int i = 0; i < r; i++)
-    {
-        string temp;
-        cin >> temp;
-        b.push_back(temp);
-    }
-
-    for (int i = 0; i < (r - 1); ++i)
-    {
-        for (int j = 0; j < (c - 1); ++j)
+        for(int j = 0; j < c; ++j)
         {
-            int temp1 = a[i][j] - '0';      //well you can't add a char with an integer
-            int temp2 = a[i + 1][j + 1] - '0';          //can you???
-            int temp3 = a[i][j + 1] - '0';              //how silly!!!!
-            int temp4 = a[i + 1][j] - '0';
+            char c;
+            cin >> c;
+            a[i][j] = c - '0';
+        }
+    }
+    for(int i = 0; i < r; ++i)
+    {
+        for(int j = 0; j < c; ++j)
+        {
+            char c;
+            cin >> c;
+            b[i][j] = c - '0';
+        }
+    }
 
-            int tempB = b[i][j] - '0';
-
-            if ((temp1 + 1) % 3 == tempB)
+    for(int i = 0; i < r - 1; ++i)
+    {
+        for(int j = 0; j < c - 1; ++j)
+        {
+            if((a[i][j] + 1) % 3 == b[i][j])
             {
-                a[i][j] = to_string((temp1 + 1) % 3)[0];
-                a[i + 1][j + 1] = to_string((temp2 + 1) % 3)[0];
-                a[i][j + 1] = to_string((temp3 + 2) % 3)[0];
-                a[i + 1][j] = to_string((temp4 + 2) % 3)[0];
+                a[i][j] = (a[i][j] + 1) % 3;
+                a[i + 1][j + 1] = (a[i + 1][j + 1] + 1) % 3;
+                a[i][j + 1] = (a[i][j + 1] + 2) % 3;
+                a[i + 1][j] = (a[i + 1][j] + 2) % 3;
             }
-            else if ((temp1 + 2) % 3 == tempB)
+            else if((a[i][j] + 2) % 3 == b[i][j])
             {
-                a[i][j] = to_string((temp1 + 2) % 3)[0];
-                a[i + 1][j + 1] = to_string((temp2 + 2) % 3)[0];
-                a[i][j + 1] = to_string((temp3 + 1) % 3)[0];
-                a[i + 1][j] = to_string((temp4 + 1) % 3)[0];
+                a[i][j] = (a[i][j] + 2) % 3;
+                a[i + 1][j + 1] = (a[i + 1][j + 1] + 2) % 3;
+                a[i][j + 1] = (a[i][j + 1] + 1) % 3;
+                a[i + 1][j] = (a[i + 1][j] + 1) % 3;
             }
         }
     }
 
-    // for (int i = 0; i < c; ++i)
-    //     cerr << a[i] << endl;
-
-    for (int i = 0; i < r; ++i)
+    for(int i = 0; i < r; ++i)
     {
-        if (a[i] != b[i])
+        for(int j = 0; j < c; ++j)
         {
-            no;
-            return;
+            if(a[i][j] != b[i][j])
+            {
+                no;
+                return;
+            }
         }
     }
 

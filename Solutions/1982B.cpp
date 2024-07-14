@@ -19,16 +19,34 @@ void solve()
     int x, y, k;
     cin >> x >> y >> k;
 
-    while (k--)
+    x++;
+    k--;
+    while (x != y)
     {
-        x++;
         while (x % y == 0)
         {
             x /= y;
         }
-    }
+        
+        if (k == 0)
+        {
+            cout << x << endl;
+            return;
+        }
 
-    cout << x << endl;
+        int temp = y - (x % y);
+        if (temp <= k)
+        {
+            x += temp;
+            k -= temp;
+        }
+        else
+        {
+            cout << x + k << endl;
+            return;
+        }
+    }
+    cout << 1 + k % (y - 1) << endl;
 
     return;
 }

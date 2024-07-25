@@ -22,20 +22,20 @@ void solve()
     vector<pair<char, bool>> s;
     string t;
     
-    s.push_back({'0', false});
+    s.push_back({'0', 0});
 
     for(int i = 0; i < n; ++i)
     {
         char c;
         cin >> c;
 
-        if(s.back().second == true or s.back().first == '1' or c == '1')
+        if(s.back().second == 1 or s.back().first == '1' or c == '1')
         {
-            s.push_back({c, true});
+            s.push_back({c, 1});
         }
         else
         {
-            s.push_back({c, false});
+            s.push_back({c, 0});
         }
     }
 
@@ -43,7 +43,7 @@ void solve()
 
     for(int i = 0; i < n; ++i)
     {
-        if(s[i + 1].first != t[i] and s[i + 1].second == false)
+        if(s[i + 1].first != t[i] and s[i + 1].second == 0)
         {
             no;
             return;

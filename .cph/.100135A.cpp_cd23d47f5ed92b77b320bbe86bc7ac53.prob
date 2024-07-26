@@ -1,0 +1,1 @@
+{"name":"Local: 100135A","url":"d:\\Programming\\Codeforces\\100135A.cpp","tests":[{"id":1713288211888,"input":"2 1 2","output":"3"},{"id":1713288226369,"input":"2\n2 -1","output":"1"},{"id":1713288310435,"input":"3\n-1 2 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programming\\Codeforces\\100135A.cpp","group":"local","local":true}

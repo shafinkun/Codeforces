@@ -23,30 +23,13 @@ void solve()
     for (auto &x : v)
         cin >> x;
 
-    for (int i = 0; i < n; ++i)
+    for (int i = 1; i < n - 1; ++i)
     {
-        bool flag = false;
-        int ind;
-        for (int j = i + 1; j < n; ++j)
+        if (v[i] > v[i - 1] and v[i] > v[i + 1])
         {
-            if (v[j] > v[i])
-            {
-                flag = true;
-                ind = j;
-                break;
-            }
-        }
-        if (flag)
-        {
-            for (int k = ind; k < n; ++k)
-            {
-                if (v[ind] > v[k])
-                {
-                    yes;
-                    cout << i + 1 << ' ' << ind + 1 << ' ' << k + 1 << endl;
-                    return;
-                }
-            }
+            yes;
+            cout << i << ' ' << i + 1 << ' ' << i + 2 << endl;
+            return;
         }
     }
     no;

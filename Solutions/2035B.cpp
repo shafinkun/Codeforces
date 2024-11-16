@@ -1,6 +1,6 @@
 /*___________________In the name of Allah________________*/
 /*____________________Solved By shafinkun________________*/
-// Problem link : https://codeforces.com/problemset/problem/1883/C
+// Problem link : https://codeforces.com/contest/2035/problem/B
 // Inquilab Zindabad!!!
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,43 +16,39 @@ const int MOD = 1e9 + 7;
 
 void solve()
 {
-    int n, k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
-    bool flag = false;
-    int mult = 1;
-
-    vector<int> v(n);
-    for (auto &it : v)
+    if (n == 1 or n == 3)
     {
-        cin >> it;
-        if (it % k == 0)
-        {
-            flag = true;
-        }
-        mult = (mult * it) % MOD;
-    }
-
-    // cerr << mult << endl;
-
-    if (flag || mult % k == 0)
-    {
-        cout << 0 << endl;
+        cout << -1 << endl;
         return;
     }
 
-    // int mini = INT_MAX;
-    // for (auto &it : v)
-    // {
-    //     int f = (it / k) + 1;
-    //     int ans = (f * k) - it;
-    //     mini = min(mini, ans);
-    // }
+    if (n == 2)
+    {
+        cout << "66" << endl;
+        return;
+    }
 
-    // cout << mini << endl;
+    if (n & 1)
+    {
+        n -= 5;
+        while (n--)
+            cout << "3";
+        cout << "36366" << endl;
 
-    cout << mult % k << endl;
+        return;
+    }
+    else
+    {
+        n -= 2;
+        while (n--)
+            cout << "3";
+        cout << "66" << endl;
 
+        return;
+    }
     return;
 }
 

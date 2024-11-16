@@ -1,8 +1,5 @@
 /*___________________In the name of Allah________________*/
 /*____________________Solved By shafinkun________________*/
-
-
-
 // Problem link : https://codeforces.com/contest/2035/problem/B
 // Inquilab Zindabad!!!
 #include <bits/stdc++.h>

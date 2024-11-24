@@ -49,6 +49,7 @@ void solve()
 
         return;
     }
+    
     return;
 }
 
@@ -61,5 +62,6 @@ signed main()
     {
         solve();
     }
+
     return 0;
 }

@@ -4,6 +4,7 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "list": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "ostream": "cpp"
     }
 }

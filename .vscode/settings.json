@@ -5,6 +5,7 @@
         "*.tcc": "cpp",
         "list": "cpp",
         "complex": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cmath": "cpp"
     }
 }
